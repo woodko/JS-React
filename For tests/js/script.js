@@ -129,4 +129,4 @@ function fib(num) {
     return result;
 }
 
-console.log(fib(5));
+fib(5);
