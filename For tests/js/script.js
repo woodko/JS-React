@@ -1,5 +1,7 @@
 'use strict';
 
+//////////////////////////////////////////////////////
+
 // let len = 5;
 // let result = '';
 // let out = document.querySelector('.out');
@@ -18,7 +20,9 @@
 // out.innerHTML = result;
 
 
-//Task 29-1
+//Task 29-1  //////////////////////////////////////////////////////
+
+
 // // Место для первой задачи
 // function calculateVolumeAndArea(out) {
 //     if(!isNaN(out) && out > 0){
@@ -51,7 +55,7 @@
 // getCoupeNumber(4);
 
 
-//Task 29-2
+//Task 29-2  //////////////////////////////////////////////////////
 
 // Место для первой задачи
 // function getTimeFromMinutes(allMinutes) {
@@ -103,30 +107,142 @@
 // }
 // findMaxNumber(33, 18, 2, 7);
 
+// Числа Фиббоначи  //////////////////////////////////////////////////////
 
-function fib(num) {
-    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
-        return "";
-    }
 
-    let result = '';
-    let first = 0;
-    let second = 1;
+// function fib(num) {
+//     if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+//         return "";
+//     }
 
-    for (let i = 0; i < num; i++) {
-        if (i + 1 === num) {
-            result += `${first}`;
-            // Без пробела в конце
-        } else {
-            result += `${first} `;
-        }
+//     let result = '';
+//     let first = 0;
+//     let second = 1;
 
-        let third = first + second;
-        first = second;
-        second = third;
-    }
+//     for (let i = 0; i < num; i++) {
+//         if (i + 1 === num) {
+//             result += `${first}`;
+//             // Без пробела в конце
+//         } else {
+//             result += `${first} `;
+//         }
 
-    return result;
-}
+//         let third = first + second;
+//         first = second;
+//         second = third;
+//     }
 
-fib(5);
+//     return result;
+// }
+
+// fib(5);
+
+
+//работа с объектами  //////////////////////////////////////////////////////
+
+// const personalPlanPeter = {
+//     name: "Peter",
+//     age: "29",
+//     skills: {
+//         languages: ['ru', 'eng'],
+//         programmingLangs: {
+//             js: '20%',
+//             php: '10%'
+//         },
+//         exp: '1 month'
+//     },
+//     showAgeAndLangs: function () {
+//         let langIn = '';
+//         for (let key of skills.languages) {
+//             langIn += key.toUpperCase() + ' ';
+//         }
+//         return `Мне ${age} лет и я владею языками: ${langIn}`;
+//     }
+// };
+
+// const {
+//     age,
+//     skills
+// } = personalPlanPeter;
+// console.log(skills.languages);
+
+
+
+// function showExperience(plan) {
+//     return plan.skills.exp;
+// }
+
+
+// function showProgrammingLangs(plan) {
+//     const langs = plan.skills.programmingLangs;
+//     var langExp = '';
+//     for (let key in langs) {
+//         langExp += `Язык ${key} изучен на ${langs[key]}` + '\n';
+//     }
+//     return langExp;
+// }
+
+
+// console.log(showExperience(personalPlanPeter));
+// console.log(showProgrammingLangs(personalPlanPeter));
+// console.log(personalPlanPeter.showAgeAndLangs());
+
+
+// Работа с массивами  //////////////////////////////////////////////////////
+
+// const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+
+// function showFamily(arr) {
+//     let out = '';
+//     for (let key of arr) {
+//         out += `${key} `;
+//     }
+//     if (arr == '') {
+//         return "Семья пуста";
+//     } else {
+//         return `Семья состоит из: ${out}`;
+//     }
+// }
+
+// const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+
+// function standardizeStrings(arr) {
+//     arr.forEach(city => {
+//         console.log(city.toLowerCase());
+//     });
+// }
+
+// console.log(showFamily(family));
+// standardizeStrings(favoriteCities);
+
+//Работа с массивами 2 //////////////////////////////////////////////////////
+
+// const someString = 'This is some strange string';
+
+// function reverse(str) {
+//     const reverse = str.split('').reverse().join('');
+//     return reverse;
+// }
+
+// const baseCurrencies = ['USD', 'EUR'];
+// const additionalCurrencies = ['UAH', 'RUB', 'CNY'];
+
+// let allBanks = [...baseCurrencies, ...additionalCurrencies];
+
+
+// function availableCurr(arr, missingCurr) {
+//     if (arr.length === 0) {
+//         return 'Нет доступных валют';
+//     } else {
+//         let out = '';
+//         arr.forEach(curr => {
+//             if (missingCurr != curr) {
+//                 out += `${curr} \n`;
+//             }
+//         });
+//         return `Доступные валюты:\n${out}`;
+//     }
+// }
+
+// console.log(reverse(someString));
+// console.log(availableCurr(allBanks, 'RUB'));
