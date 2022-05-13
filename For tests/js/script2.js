@@ -54,7 +54,7 @@
 
 ////////////////////////////////////////////////////////////
 
-const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi'];
+const students = ['Peter', 'Andrew', 'Ann', 'Mark', 'Josh', 'Sandra', 'Cris', 'Bernard', 'Takesi', 'Sam'];
 
 function sortStudentsByGroups(arr) {
 
@@ -64,7 +64,7 @@ function sortStudentsByGroups(arr) {
         [],
         [],
         [],
-        'Оставшиеся студенты:-'
+        'Оставшиеся студенты: -'
     ];
 
     arr.forEach(function (element, i) {
@@ -75,15 +75,16 @@ function sortStudentsByGroups(arr) {
         } else if (i < 9) {
             groups[2].push(element);
         } else {
-            let tmp = groups[3].slice(0, -1);
-            tmp += ` ${element},`;
-            groups[3] = tmp;
+            groups[3]  += `${element}, `;
         }
     });
 
     // let tmp = groups[3].replace(/.$/, '');
-    let tmp = groups[3].slice(0, -1);
-    groups[3] = tmp;
+    let tmp = groups[3].slice(0, -2);
+    if (arr.length > 9){
+        groups[3] = tmp.replace(/[-]/g, '');
+    }
+ 
 
     return groups;
 
