@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             check = check.checked;
+
             if (check) {
                 console.log('Добавляем любимый фильм');
             };
@@ -111,18 +112,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
         event.target.reset();
     });
-
-    const delBtn = document.querySelectorAll('.delete');
-    let films = document.querySelectorAll('.promo__interactive-item');
-
-
-    for (let i = 0; i < delBtn.length; i++) {
-        delBtn[i].addEventListener('click', () => {
-
-
-
-        });
-
-    };
-
 });
