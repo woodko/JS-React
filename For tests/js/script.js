@@ -246,3 +246,9 @@
 
 // console.log(reverse(someString));
 // console.log(availableCurr(allBanks, 'RUB'));
+
+let a = 124;
+
+a %= 100;
+
+console.log(a);

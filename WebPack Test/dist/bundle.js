@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log((7,6,console.log("Hello1!"),42)),console.log("Bye")})();
