@@ -40,12 +40,18 @@
 
 input = ["red", "green", "red", "blue", "blue"];
 
+result = {};
+
 function numberOfPairs(gloves) {
-    let check = 0;
-
-    gloves.forEach((item, i) => {
-
-    });
+    let out = 0;
+    for (let i = 0; i < gloves.length; i++) {
+        gloves.forEach(item => {
+            if (gloves[i] === item) {
+                out += 1;
+            }
+        });
+    }
+    console.log(out);
 }
 
 console.log(numberOfPairs(input));
